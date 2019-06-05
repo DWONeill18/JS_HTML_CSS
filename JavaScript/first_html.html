@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="myCSS.css"></link>
+
+
+
+
+
+</head>
+
+<a class="btn btn-primary" href="http:google.com">Google</a>
+<a class="btn btn-secondary" href="http:bbc.co.uk">BBC</a>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark" onclick="doThing()"> Hello </button>
+
+<button onclick="doThing()"> hello </button>
+
+
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+
+
+
+
+<body>
+
+    <marquee="header">
+        <h1> David O'Neill </h1>
+        </marquee>
+
+
+        <!-- div.absolute {
+
+        position: absolute;
+        top: 80px;
+        rigth: 0;
+        width: 200px;
+        height: 100px
+        border: 3px solid #73AD21
+
+ } -->
+
+        <div id="content">
+            Hi! I'm David, 29 from Lincoln. My hobbies include playing sports and games. My favourite sport is football.
+
+            </p>
+
+
+        </div>
+        <p>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+  </label>
+                <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+  </label>
+                <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+  </label>
+            </div>
+
+
+            <p>Enter numbers in the fields, then click "Multiply" to submit the calculation:</p>
+
+            <form id="product" action="/action_page.php">
+                Value1: <input id="num1" type="number" name="value1"><br> Value2: <input id="num2" type="number" name="value2"><br><br>
+                <input type="button" onclick="outputProduct()" value="Submit">
+            </form>
+
+            <!-- <button onclick="printy()" > print this </button> -->
+
+            <button onclick="printy()"> print this </button>
+
+
+            <p>Answer is : </p>
+            <p id="numberPart"> </p>
+
+           
+
+            <script>
+                function printy() {
+                    let num1 = document.getElementById("num1").value;
+                    let num2 = document.getElementById("num2").value;
+                    let sum = (num1 * num2);
+                    // document.getElementById("numberPart").innerHTML = sum;
+
+
+                    
+                    //
+                
+                    let newE = document.createElement("p");
+                    newE.innerHTML = sum;
+                    document.getElementById("numberPart").appendChild( newE)
+
+               
+
+        
+            }
+            </script>
+
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+            <script src="index.js"></script>
+            <script src="addition.js"></script>
+
+
+            <body>
+
+</html>

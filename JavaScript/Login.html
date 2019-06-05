@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="myCSS4.css"></link>
+
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <p> This is the Login page </p>
+
+    <p>Enter ID and password in the fields, then click "Login" to login</p>
+
+    <form id="product" action="/action_page.php">
+        ID: <input id="ID" type="number" name="value1"><br> Password: <input id="password" type="string" name="value2"><br><br>
+        <input type="button" onclick="outputProduct()" value="Login">
+    </form>
+
+
+
+    <script>
+        function getUsers() {
+ 
+            fetchData("GET", "http://localhost:8080/JavaEEServer-1.0/api/accounts").then((req) => {
+                console.log('fulfilled', req.parsedResponse);
+            })
+                
+
+            
+
+            //
+
+            let newE = document.createElement("p");
+            newE.innerHTML = num1;
+            document.getElementById("numberPart").appendChild(newE)
+
+
+
+
+        }
+    </script>
+
+<!-- fetchData to "GET" user details from http://localhost:8080/JavaEEServer-1.0/api/accounts/{id} -->
+<!-- Check id and user details against inputted data from form
+Give some output to indicate a successful match, maybe switch to a new page -->
+
+
+
+
+    <script>
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="Request.js"></script> -->
+    <!-- <script src="Promise.js"></script> -->
+    <script src="index.js"></script>
+    <script src="addition.js"></script>
+
+</body>
+
+</html>

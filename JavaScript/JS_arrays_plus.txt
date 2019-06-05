@@ -1,0 +1,17 @@
+const myObject = {
+
+    firstname: "David",
+    lastname: "O'Neill",
+    age: 29,
+    address: {
+
+        line1: "118 Boulthma Park Road",
+        line2: "Boultham"
+        line3: null,
+        city: "Lincoln"
+        postcode: "LN6 7TQ"
+    }
+
+}
+
+

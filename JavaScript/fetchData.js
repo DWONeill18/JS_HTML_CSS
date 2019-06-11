@@ -1,17 +1,14 @@
-function fetchData(method, url) {
+function fetchData(method, textbody, url) {
     return new Promise((resolve, reject) => {
         const req = new XMLHttpRequest();
         req.onreadystatechange = () => {
 
             if (req.readyState === 4) {
 
-                if (req.responseText) {
-                    req.parsedResponse = JSON.parse(req.responseText);
-                }
-
-                if (req.status === 200) {
+                if (req.status >= 200 && req.status < 300) {
+                    // 200 = ok, 201=created, 204=no content
                     // req.status === 201 leads to error msg
-                    resolve(req);
+                    resolve(req.responseText);
                     // console.log("ok", req);
                 }
                 else {
@@ -30,8 +27,9 @@ function fetchData(method, url) {
             }
 
         };
-        req.open(method, url);
-        req.send();
+        req.open(method, "http://localhost:8080/JavaEEServer-1.0/api/" + url);
+        req.setRequestHeader("content-type", "apllication/json");
+        req.send(textbody);
     });
 }
 
@@ -39,7 +37,7 @@ console.log('before promise');
 
 function changePage(){
 
-    window.location = "Login.html";
+    window.location.assign("Login.html");
 
 }
 

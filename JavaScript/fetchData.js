@@ -41,14 +41,14 @@ function changePage(){
 
 }
 
+
+let userData;
+
+
 function onClickLogin(){
-
-
-fetchData("GET", "http://localhost:8080/JavaEEServer-1.0/api/accounts").then((req) => {
-    console.log('fulfilled', req.parsedResponse);
-}).catch((err) => {
-    console.log('rejected. reason:', err);
-});
+fetchData("GET", null, "accounts").then((value) => {
+ userData=value}).catch((err) => {
+    console.log('rejected. reason:', err)});
 console.log('after promise');
 
 changePage();

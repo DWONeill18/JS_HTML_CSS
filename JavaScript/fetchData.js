@@ -28,7 +28,7 @@ function fetchData(method, textbody, url) {
 
         };
         req.open(method, "http://localhost:8080/JavaEEServer-1.0/api/" + url);
-        req.setRequestHeader("content-type", "apllication/json");
+        req.setRequestHeader("content-type", "application/json");
         req.send(textbody);
     });
 }
@@ -46,7 +46,7 @@ let userData;
 
 
 function onClickLogin(){
-fetchData("GET", null, "accounts").then((value) => {
+fetchData("GET", null, "games").then((value) => {
  userData=value}).catch((err) => {
     console.log('rejected. reason:', err)});
 console.log('after promise');
